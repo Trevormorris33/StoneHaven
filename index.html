@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stonehaven Restaurant & Winery | Kampala</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: 'Lato', sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+        .smooth-scroll { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="smooth-scroll bg-[var(--bg-primary)] text-[var(--text-primary)]">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold tracking-tighter uppercase logo">Stonehaven</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium transition">Home</a>
+                        <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium transition">About</a>
+                        <a href="#menu" class="px-3 py-2 rounded-md text-sm font-medium transition">Menu</a>
+                        <a href="#reviews" class="px-3 py-2 rounded-md text-sm font-medium transition">Reviews</a>
+                        <a href="#gallery" class="px-3 py-2 rounded-md text-sm font-medium transition">Gallery</a>
+                        <a href="#contact" class="btn-primary px-5 py-2 rounded-full text-sm font-medium">Contact Us</a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="focus:outline-none">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium">Home</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium">About</a>
+                <a href="#menu" class="block px-3 py-2 text-base font-medium">Menu</a>
+                <a href="#reviews" class="block px-3 py-2 text-base font-medium">Reviews</a>
+                <a href="#gallery" class="block px-3 py-2 text-base font-medium">Gallery</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center text-white pt-20">
+        <div class="px-4 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-lg">Stonehaven Restaurant & Winery</h1>
+            <p class="text-lg md:text-xl lg:text-2xl mb-8 font-light italic tracking-widest drop-shadow-md">Fine Dining & Exquisite Wines in the Heart of Kampala</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#menu" class="bg-amber-800 text-white px-6 py-3 rounded-full text-base md:text-lg font-medium hover:bg-amber-900 transition duration-300 shadow-xl">Explore Menu</a>
+                <button id="open-reservation-modal" class="bg-white text-amber-900 px-6 py-3 rounded-full text-base md:text-lg font-medium hover:bg-gray-100 transition duration-300 shadow-xl">Book a Table</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 text-amber-900">A Taste of Excellence</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Welcome to Stonehaven Restaurant & Winery, Kampala's premier destination for family-friendly dining and sophisticated wine experiences. We pride ourselves on creating a warm, inviting atmosphere complete with a cozy fireplace, perfect for any occasion.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-amber-800 mr-3 text-xl"></i>
+                            <span>All-you-can-eat experiences</span>
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-amber-800 mr-3 text-xl"></i>
+                            <span>Daily Happy-hour food & drink specials</span>
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-amber-800 mr-3 text-xl"></i>
+                            <span>Elegant fireplace for a cozy ambiance</span>
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-amber-800 mr-3 text-xl"></i>
+                            <span>Family-friendly environment for all ages</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="images/img_1yxsQTB1aaSI8lfCXSlbvI-y1rmApqXW2.jpg" alt="Restaurant Interior" class="rounded-lg shadow-lg">
+                    <img src="images/img_1Uw8s9oBystRFgAiTNZfJ1wbPD2MqFf5R.jpg" alt="Wine" class="rounded-lg shadow-lg mt-8">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="statistics" class="py-20 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <defs>
+                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"/>
+                    </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#grid)"/>
+            </svg>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Achievements</h2>
+                <div class="w-24 h-1 bg-white/50 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="stat-item group">
+                    <div class="relative">
+                        <div class="w-20 h-20 md:w-24 md:h-24 bg-white/10 backdrop-blur-sm rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
+                            <i class="fas fa-star text-3xl md:text-4xl text-amber-300"></i>
+                        </div>
+                        <div class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
+                            <span class="counter" data-target="1263">0</span>+
+                        </div>
+                    </div>
+                    <p class="text-white/80 text-lg font-medium">Happy Reviews</p>
+                    <p class="text-white/50 text-sm mt-1">on Google</p>
+                </div>
+                <div class="stat-item group">
+                    <div class="relative">
+                        <div class="w-20 h-20 md:w-24 md:h-24 bg-white/10 backdrop-blur-sm rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
+                            <i class="fas fa-calendar-alt text-3xl md:text-4xl text-amber-300"></i>
+                        </div>
+                        <div class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
+                            <span class="counter" data-target="4">0</span>+
+                        </div>
+                    </div>
+                    <p class="text-white/80 text-lg font-medium">Years Experience</p>
+                    <p class="text-white/50 text-sm mt-1">in fine dining</p>
+                </div>
+                <div class="stat-item group">
+                    <div class="relative">
+                        <div class="w-20 h-20 md:w-24 md:h-24 bg-white/10 backdrop-blur-sm rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
+                            <i class="fas fa-utensils text-3xl md:text-4xl text-amber-300"></i>
+                        </div>
+                        <div class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
+                            <span class="counter" data-target="20">0</span>+
+                        </div>
+                    </div>
+                    <p class="text-white/80 text-lg font-medium">Menu Items</p>
+                    <p class="text-white/50 text-sm mt-1">curated dishes</p>
+                </div>
+                <div class="stat-item group">
+                    <div class="relative">
+                        <div class="w-20 h-20 md:w-24 md:h-24 bg-white/10 backdrop-blur-sm rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
+                            <i class="fas fa-wine-glass-alt text-3xl md:text-4xl text-amber-300"></i>
+                        </div>
+                        <div class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
+                            <span class="counter" data-target="50">0</span>+
+                        </div>
+                    </div>
+                    <p class="text-white/80 text-lg font-medium">Wine Selection</p>
+                    <p class="text-white/50 text-sm mt-1">premium wines</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-amber-900">Our Menu</h2>
+            <p class="text-gray-600 mb-12 max-w-2xl mx-auto">Discover our curated selection of dishes, from traditional favorites to contemporary culinary creations.</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                <!-- Appetizers & Sides -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <h3 class="text-2xl font-bold mb-6 text-amber-800 border-b pb-2">Appetizers & Sides</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span>Plantain Chips</span>
+                            <span class="text-amber-800 font-bold">USh 25k</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span>Cheese Board</span>
+                            <span class="text-amber-800 font-bold">USh 55k</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span>Bread and Butter</span>
+                            <span class="text-amber-800 font-bold">USh 15k</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Main Courses -->
+                <div class="bg-white p-8 rounded-xl shadow-sm lg:col-span-2">
+                    <h3 class="text-2xl font-bold mb-6 text-amber-800 border-b pb-2">Main Courses</h3>
+                    <div class="grid md:grid-cols-2 gap-x-8 gap-y-4">
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>Bacon Stuffed Chicken</span>
+                                <span class="text-amber-800 font-bold">USh 65k</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>Stonehaven Seafood Platter</span>
+                                <span class="text-amber-800 font-bold">USh 120k</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>Pork Ribs and Sauce</span>
+                                <span class="text-amber-800 font-bold">USh 75k</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>Mashed Potatoes Rose Wine with Beef Steak</span>
+                                <span class="text-amber-800 font-bold">USh 85k</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>Grilled Tilapia Fillet</span>
+                                <span class="text-amber-800 font-bold">USh 55k</span>
+                            </li>
+                        </ul>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>Creole Pork Chops</span>
+                                <span class="text-amber-800 font-bold">USh 68k</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>Baby Chicken</span>
+                                <span class="text-amber-800 font-bold">USh 60k</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>Steak Salad</span>
+                                <span class="text-amber-800 font-bold">USh 45k</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>Chips and Pork Ribs</span>
+                                <span class="text-amber-800 font-bold">USh 70k</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>English Breakfast</span>
+                                <span class="text-amber-800 font-bold">USh 40k</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <h3 class="text-2xl font-bold mb-6 text-amber-800 border-b pb-2">Desserts</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span>Ice Cream Trio</span>
+                            <span class="text-amber-800 font-bold">USh 25k</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <span>Chocolate Cake</span>
+                            <span class="text-amber-800 font-bold">USh 30k</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Drinks & Cocktails -->
+                <div class="bg-white p-8 rounded-xl shadow-sm lg:col-span-2">
+                    <h3 class="text-2xl font-bold mb-6 text-amber-800 border-b pb-2">Drinks & Cocktails</h3>
+                    <div class="grid md:grid-cols-2 gap-x-8 gap-y-4">
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>Stonehaven Signature Cocktail</span>
+                                <span class="text-amber-800 font-bold">USh 35k</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>Pineapple Mint</span>
+                                <span class="text-amber-800 font-bold">USh 20k</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>Sangria (Glass/Pitcher)</span>
+                                <span class="text-amber-800 font-bold">USh 30k/110k</span>
+                            </li>
+                        </ul>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>Blue Lagoon</span>
+                                <span class="text-amber-800 font-bold">USh 32k</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                <span>Long Island Iced Tea</span>
+                                <span class="text-amber-800 font-bold">USh 38k</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4">Guest Experiences</h2>
+            <div class="flex justify-center items-center mb-12">
+                <div class="flex text-amber-400 text-2xl mr-4">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-2xl font-bold">4.3 / 5.0</span>
+                <span class="ml-4 text-amber-200">(1,263 Google Reviews)</span>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="review-card p-8 rounded-xl">
+                    <p class="italic mb-6">"Exceptional service and the wine selection is unparalleled in Kampala. The steak with mashed potatoes in rose wine was a revelation!"</p>
+                    <p class="font-bold">- Sarah J.</p>
+                </div>
+                <div class="review-card p-8 rounded-xl">
+                    <p class="italic mb-6">"Great family atmosphere. Kids loved the baby chicken and the fireplace made it so cozy. Definitely coming back for happy hour."</p>
+                    <p class="font-bold">- David M.</p>
+                </div>
+                <div class="review-card p-8 rounded-xl">
+                    <p class="italic mb-6">"The Stonehaven Seafood Platter is massive and fresh. Perfect for sharing with friends. The cocktails are also very well made."</p>
+                    <p class="font-bold">- Elena R.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-amber-900">Gallery</h2>
+            <p class="text-gray-600 mb-12">A glimpse into the Stonehaven experience.</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-lg h-64">
+                    <img src="images/img_1QdLEazelSAPzGR-mUg0vvk2g9l-UBKQY.jpg" alt="Restaurant Interior" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg h-64">
+                    <img src="images/img_1XXa6UYnsLIJIBoWLgv_tsFk-UtoftDyh.jpg" alt="Dining Experience" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg h-64">
+                    <img src="images/img_1ZUjiQqortfuDjfK97jfEGHEbAWUReQtO.jpg" alt="Wine & Dishes" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg h-64">
+                    <img src="images/img_1d4-pbtDXdNEVtubf208FeDbW6KXcfBNM.jpg" alt="Cozy Ambiance" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg h-64">
+                    <img src="images/img_1dWF3TUkMXPfFw-76fpJuj3fPDYym1Qdm.jpg" alt="Restaurant View" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg h-64">
+                    <img src="images/img_1k7mkd2p3zAHHaXNETrd8tPqMe12sbrfL.jpg" alt="Fine Dining" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg h-64">
+                    <img src="images/img_1tOVXSda2OwkFBpRsaFoHi3Je_sS0W4jb.jpg" alt="Chef Specials" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg h-64">
+                    <img src="images/img_1uyL_pskGwf4kRnJjeTX_dBEGLOwOlTio.jpg" alt="Wine Selection" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 text-amber-900">Find Us</h2>
+                    <p class="text-gray-600 mb-8">Have a question or want to make a reservation? Reach out to us or visit us at our Kampala location.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-amber-800 mt-1 mr-4 text-xl"></i>
+                            <div>
+                                <p class="font-bold text-gray-800">Address</p>
+                                <p class="text-gray-600">Malcolm X Ave, Kampala, Uganda</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone text-amber-800 mt-1 mr-4 text-xl"></i>
+                            <div>
+                                <p class="font-bold text-gray-800">Phone</p>
+                                <p class="text-gray-600">0709 342064</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-amber-800 mt-1 mr-4 text-xl"></i>
+                            <div>
+                                <p class="font-bold text-gray-800">Hours</p>
+                                <p class="text-gray-600">Daily: 8:00 AM - 11:00 PM</p>
+                                <p class="text-sm text-gray-500 italic">Special winery tours on Fridays</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Get Directions Button -->
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Stonehaven+Restaurant+%26+Winery,+Malcolm+X+Ave,+Kampala&destination_place_id=ChIJXwIjX3VmTGgRQ7VJWEzShc8" target="_blank" class="inline-flex items-center gap-3 bg-amber-800 text-white px-6 py-3 rounded-xl font-bold hover:bg-amber-900 transition mt-4">
+                            <i class="fas fa-directions"></i>
+                            Get Directions
+                        </a>
+                    </div>
+                    
+                    <!-- Google Maps Embed -->
+                    <div class="mt-8 rounded-xl overflow-hidden shadow-lg h-64 md:h-80">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.751839665861!2d32.59763807319924!3d0.33075726400745026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb4a75e52841%3A0x2ba92a27fee29d63!2sStonehaven%20Restaurant%20%26%20Winery!5e0!3m2!1sen!2sug!4v1778431528633!5m2!1sen!2sug"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Stonehaven Restaurant & Winery Location">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg contact-form">
+                    <h3 class="text-2xl font-bold mb-6 text-amber-900">Send a Message</h3>
+                    <form action="#" class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" placeholder="First Name" class="w-full p-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-amber-800">
+                            <input type="text" placeholder="Last Name" class="w-full p-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-amber-800">
+                        </div>
+                        <input type="email" placeholder="Email Address" class="w-full p-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-amber-800">
+                        <textarea placeholder="Your Message or Reservation Details" rows="4" class="w-full p-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-amber-800"></textarea>
+                        <button type="submit" class="w-full bg-amber-800 text-white py-3 rounded-lg font-bold hover:bg-amber-900 transition">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-3xl font-bold tracking-tighter text-amber-500 uppercase mb-4 block">Stonehaven</span>
+            <p class="text-gray-400 mb-8 max-w-md mx-auto">Providing exceptional dining and winery experiences in Kampala since 2010.</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://www.facebook.com/stonehavenkla/" target="_blank" class="text-2xl hover:text-amber-500 transition"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/stonehavenkla/" target="_blank" class="text-2xl hover:text-amber-500 transition"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/Stonehavenkla" target="_blank" class="text-2xl hover:text-amber-500 transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-2xl hover:text-amber-500 transition"><i class="fab fa-tripadvisor"></i></a>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-sm text-gray-500">
+                <p>&copy; 2024 Stonehaven Restaurant & Winery. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- WhatsApp Quick Chat Button -->
+        <a href="https://wa.me/256709342064?text=Hello%20Stonehaven%2C%20I%20would%20like%20to%20make%20an%20inquiry" target="_blank" id="whatsapp-btn" class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group">
+            <i class="fab fa-whatsapp text-white text-3xl"></i>
+            <span class="absolute right-full mr-3 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+                Chat with us
+            </span>
+        </a>
+
+        <!-- Reservation Modal -->
+    <div id="reservation-modal" class="fixed inset-0 z-[100] hidden overflow-y-auto">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="modal-overlay"></div>
+        <div class="relative flex items-start justify-center min-h-screen p-4 py-12">
+            <!-- Step 1: Reservation Details -->
+            <div id="step1-form" class="reservation-card p-8 md:p-12 max-w-lg w-full rounded-2xl shadow-2xl transform transition-all duration-300 scale-100 my-auto">
+                <div class="flex justify-between items-center mb-8">
+                    <h3 class="text-2xl md:text-3xl font-bold">Reserve a Table</h3>
+                    <button id="close-modal-btn" class="text-gray-400 hover:text-gray-600 text-2xl transition">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Number of Guests</label>
+                        <select id="guests" class="w-full p-4 rounded-xl border focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            <option value="">Select guests</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6 Guests</option>
+                            <option value="7">7+ Guests (Call us)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Date</label>
+                            <input type="date" id="reservation-date" class="w-full p-4 rounded-xl border focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Time</label>
+                            <select id="reservation-time" class="w-full p-4 rounded-xl border focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                <option value="">Select time</option>
+                                <option value="08:00">8:00 AM</option>
+                                <option value="09:00">9:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                                <option value="20:00">8:00 PM</option>
+                                <option value="21:00">9:00 PM</option>
+                                <option value="22:00">10:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button id="next-to-step2" class="w-full bg-amber-700 hover:bg-amber-800 text-white py-4 rounded-xl font-bold text-lg transition transform hover:scale-[1.02]">
+                        Next Step
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 2: Personal Details -->
+            <div id="step2-form" class="reservation-card p-8 md:p-12 max-w-lg w-full rounded-2xl shadow-2xl transform transition-all duration-300 scale-100 hidden my-auto">
+                <div class="flex justify-between items-center mb-8">
+                    <h3 class="text-2xl md:text-3xl font-bold">Complete Reservation</h3>
+                    <button id="close-modal-btn2" class="text-gray-400 hover:text-gray-600 text-2xl transition">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">First Name</label>
+                            <input type="text" id="first-name" placeholder="John" class="w-full p-4 rounded-xl border focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Last Name</label>
+                            <input type="text" id="last-name" placeholder="Doe" class="w-full p-4 rounded-xl border focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Phone Number</label>
+                        <input type="tel" id="phone-number" placeholder="+256 700 000 000" class="w-full p-4 rounded-xl border focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Email Address</label>
+                        <input type="email" id="email-address" placeholder="john@example.com" class="w-full p-4 rounded-xl border focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <input type="checkbox" id="agree-rules" class="mt-1 w-5 h-5 rounded accent-amber-600">
+                            <span class="text-sm">I agree to the restaurant's <a href="#" class="text-amber-600 hover:underline">house rules</a> and code of conduct</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <input type="checkbox" id="receive-offers" class="mt-1 w-5 h-5 rounded accent-amber-600">
+                            <span class="text-sm">I would like to receive updates about special offers and events via email</span>
+                        </label>
+                    </div>
+                    
+                    <button id="submit-reservation" class="w-full bg-amber-700 hover:bg-amber-800 text-white py-4 rounded-xl font-bold text-lg transition transform hover:scale-[1.02]">
+                        Reserve Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            <div id="success-form" class="reservation-card p-8 md:p-12 max-w-lg w-full rounded-2xl shadow-2xl transform transition-all duration-300 scale-100 hidden text-center my-auto">
+                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-check text-green-600 text-4xl"></i>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">Reservation Confirmed!</h3>
+                <p class="text-gray-600 mb-6">Thank you for your reservation. We look forward to welcoming you at Stonehaven Restaurant & Winery.</p>
+                <p class="text-sm text-gray-500 mb-8">A confirmation has been sent to your email address.</p>
+                <button id="close-success-btn" class="bg-amber-700 hover:bg-amber-800 text-white px-8 py-3 rounded-xl font-bold transition">
+                    Done
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
